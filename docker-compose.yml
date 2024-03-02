@@ -1,9 +1,10 @@
 services:
+  frontend:
+    image: mjsflames/quirknotes_frontend:latest
+    ports:
+    - "3000:3000"
   backend:
-    build:
-      context: .
-      dockerfile: Dockerfile_backend
-      target: backend
+    image: mjsflames/quirknotes_backend:latest
     ports:
     - "4000:4000"
     environment:
